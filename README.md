@@ -122,7 +122,6 @@ Los protocolos de red establecen las reglas que permiten que diferentes disposit
 * **SSH:** permite administrar equipos de manera remota y segura.
 * **SMTP:** se utiliza para el envío de correos electrónicos.
 
-En ciberseguridad, conocer estos protocolos ayuda a entender cómo funciona una red y qué servicios pueden estar expuestos.
 
 ### 3. ¿Qué es un sniffer?
 
@@ -148,7 +147,6 @@ Algunas herramientas de OSINT que son ampliamente conocidas y utilizadas en cibe
 4. **SpiderFoot:** automatiza la recopilación de información sobre diferentes tipos de objetivos.
 5. **theHarvester:** permite recopilar información pública relacionada con dominios, correos electrónicos, subdominios y otros datos.
 
-No existe una clasificación universal que determine cuáles son exactamente las cinco herramientas más utilizadas, por lo que esta lista considera herramientas ampliamente conocidas dentro del área de OSINT y reconocimiento.
 
 ### 6. Investiga 5 softwares no mencionados en la práctica que sirvan para el análisis de comunicaciones.
 
@@ -160,7 +158,6 @@ Cinco herramientas que pueden utilizarse para analizar comunicaciones y tráfico
 4. **Suricata:** sistema de detección y prevención de intrusiones que analiza el tráfico de red.
 5. **tcpdump:** herramienta de línea de comandos utilizada para capturar y analizar paquetes.
 
-Estas herramientas permiten observar distintos aspectos de las comunicaciones, desde la captura directa de paquetes hasta el monitoreo y detección de actividad potencialmente maliciosa.
 
 ### 7. ¿Por qué se considera a las personas como el eslabón más débil de seguridad?
 
