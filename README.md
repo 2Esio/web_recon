@@ -2,9 +2,9 @@
 
 ## Integrantes:
 
-- Marco
-- Violeta
-- Ximena
+- Flores Cid Marco
+- Castillo Camacho Violeta Ardeni
+- Sánchez Cervantes Yolanda Ximena
 
 ## Uso:
 
