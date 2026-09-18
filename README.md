@@ -103,11 +103,32 @@ Protocolos de Aplicación: HTTP/HTTPS, DNS, FTP, SSH, SMTP, POP3, IMAP, DHCP.
 3. Respecto a la pregunta anterior. ¿Cómo funcionan? ¿Para qué sirven?
 4. ¿Qué es un sniffer?
 5. ¿Qué significa OSINT? ¿Para qué sirve?
+Significa Open Source Intelligence (Inteligencia de Fuentes Abiertas). Sirve para recolectar, procesar y analizar información pública disponible en diversas fuentes de internet (redes sociales, bases de datos públicas, foros, registros gubernamentales) con el objetivo de generar inteligencia procesable, es bastante útil en las etapas tempranas de un pentest para perfilar un objetivo sin interactuar directamente con él.
 6. Investiga los 5 OSINT más usados.
+ 1. Shodan: Motor de búsqueda para dispositivos conectados a internet (IoT, servidores, cámaras).
+
+2. Maltego: Herramienta gráfica para realizar minería de datos y mapear relaciones entre personas, dominios, IPs y redes sociales.
+
+3. TheHarvester: Diseñado para recolectar correos electrónicos, nombres, subdominios e IPs de diferentes motores de búsqueda.
+
+4. Recon-ng: Framework completo de reconocimiento web escrito en Python, similar en interfaz a Metasploit.
+
+5. SpiderFoot: Herramienta automatizada que consulta más de 100 fuentes de datos públicas para recolectar información sobre IPs, dominios y correos.
+   
 7. Investiga 5 softwares no mencionados en la práctica que sirvan para el análisis de comunicaciones.
-8. ¿Por qué se considera a las personas como el eslabón más débil de seguridad?
-9. ¿Qué acciones haces para protegerte de ciberataques?
-10. ¿Crees que tus métodos preventivos son suficientes?
+
+   Wireshark: El analizador de protocolos (sniffer) de red más utilizado a nivel mundial.
+
+tcpdump: Herramienta de línea de comandos para capturar y analizar tráfico en sistemas Unix/Linux.
+
+Burp Suite: Proxy de interceptación utilizado masivamente para el análisis de tráfico y vulnerabilidades en aplicaciones web.
+
+Zeek (anteriormente Bro): Framework de análisis de tráfico de red centrado en la seguridad y monitoreo a gran escala.
+
+Kismet: Sniffer, detector y sistema de prevención de intrusiones específico para redes inalámbricas (Wi-Fi, Bluetooth).
+9. ¿Por qué se considera a las personas como el eslabón más débil de seguridad?
+10. ¿Qué acciones haces para protegerte de ciberataques?
+11. ¿Crees que tus métodos preventivos son suficientes?
 
 ## Secciones:
 **Requisitos:** 
@@ -145,7 +166,10 @@ Escaneo de Puertos: Finalmente, ejecuta nmap -sV para detectar qué puertos est�
 **Procesamiento:** 
 El script toma toda la información en crudo obtenida en la fase de adquisición (que suele ser ruidosa y larga) y le da formato estructurado utilizando comandos como grep, awk y head. Todo este formato limpio se almacena en variables de bash.
 Al final, utiliza un bloque echo que redirige (>) el texto ordenado por secciones (WHOIS, CONECTIVIDAD, DNS, SUBDOMINIOS, NMAP, etc.) a un archivo .txt cuyo nombre se genera dinámicamente sustituyendo diagonales por guiones bajos. Esto permite que el analista lea de manera amigable los resultados sin tener que ejecutar comando por comando.
+
  **Análisis:** El script toma toda la información en crudo obtenida en la fase de adquisición (que suele ser ruidosa y larga) y le da formato estructurado utilizando comandos como grep, awk y head. Todo este formato limpio se almacena en variables de bash.
 Al final, utiliza un bloque echo que redirige (>) el texto ordenado por secciones (WHOIS, CONECTIVIDAD, DNS, SUBDOMINIOS, NMAP, etc.) a un archivo .txt cuyo nombre se genera dinámicamente sustituyendo diagonales por guiones bajos. Esto permite que el analista lea de manera amigable los resultados sin tener que ejecutar comando por comando.
- **Propuestas:** En esta fase se generan datos de inteligencia cruzando la información formateada. Por ejemplo, al relacionar los correos obtenidos en WHOIS con los subdominios vulnerables descubiertos por dnsrecon, o al analizar las versiones desactualizadas de servicios arrojadas por nmap.Durante este análisis, se deben tener presentes consideraciones éticas:Herramientas como Nmap y scripts de enumeración tienen un uso dual, ya que pueden servir tanto para propósitos beneficiosos (mejorar la seguridad) como para realizar ataques.   El carácter ético de utilizar este script depende de la finalidad, la autorización y el contexto.   Si al analizar los resultados se descubre accidentalmente una vulnerabilidad crítica, se debe realizar un proceso de divulgación responsable.   Esto requiere confirmar la vulnerabilidad sin aumentar el daño.   También exige documentar los hechos con precisión y utilizar el canal adecuado para escalar el problema de manera proporcional.  
+
+ **Propuestas:** En esta fase se generan datos de inteligencia cruzando la información formateada. Por ejemplo, al relacionar los correos obtenidos en WHOIS con los subdominios vulnerables descubiertos por dnsrecon, o al analizar las versiones desactualizadas de servicios arrojadas por nmap.Durante este análisis, se deben tener presentes consideraciones éticas:Herramientas como Nmap y scripts de enumeración tienen un uso dual, ya que pueden servir tanto para propósitos beneficiosos (mejorar la seguridad) como para realizar ataques.   El carácter ético de utilizar este script depende de la finalidad, la autorización y el contexto.   Si al analizar los resultados se descubre accidentalmente una vulnerabilidad crítica, se debe realizar un proceso de divulgación responsable.   Esto requiere confirmar la vulnerabilidad sin aumentar el daño.   También exige documentar los hechos con precisión y utilizar el canal adecuado para escalar el problema de manera proporcional.
+
  ## Referencias
